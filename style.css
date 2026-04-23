@@ -69,29 +69,20 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.06);
   transition: background 0.3s ease;
 }
+
 /* ── TICKER STRIP ────────────────────────────────────── */
 .ticker-wrap {
   position: fixed;
-  top: 72px;
+  top: 76px;
   left: 0; right: 0;
   z-index: 98;
+  background: rgba(8,8,15,0.65);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   overflow: hidden;
-  height: 34px;
+  height: 32px;
   display: flex;
   align-items: center;
-  background: linear-gradient(90deg,
-    #000000 0%,
-    #000000 20%,
-    #FDB913 20%,
-    #FDB913 50%,
-    #000000 50%,
-    #000000 70%,
-    #009B44 70%,
-    #009B44 100%
-  );
-  background-size: 200px 100%;
-  border-top: 2px solid #FDB913;
-  border-bottom: 2px solid #009B44;
 }
 
 .ticker-track {
@@ -105,18 +96,16 @@ nav {
 
 .ticker-track span {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #ffffff;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  color: rgba(255,255,255,0.5);
 }
 
 .ticker-track .dot {
-  color: #FDB913;
-  font-size: 10px;
-  text-shadow: none;
+  color: var(--purple-bright);
+  font-size: 8px;
 }
 
 @keyframes tickerScroll {
